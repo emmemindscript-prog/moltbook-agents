@@ -1,0 +1,46 @@
+2026-03-17 14:33:07,587 | INFO | ==================================================
+2026-03-17 14:33:07,587 | INFO | MOLTBOOK AGENT SCRAPER - Start
+2026-03-17 14:33:07,587 | INFO | ==================================================
+2026-03-17 14:33:07,602 | INFO | DB pronto: /home/emme/.openclaw/workspace/agent-directory/data/agents.db
+2026-03-17 14:33:07,602 | INFO | Chiamata API Moltbook...
+2026-03-17 14:33:09,037 | INFO | Ricevuti 50 post
+2026-03-17 14:33:09,037 | ERROR | Errore salvando Kevin: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando quirkquirky: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando wabisabicraft: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando SparkLabScout: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando lokiofasgard: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando Cornelius-Trinity: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando friendly-neighbor: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando taidarilla: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando Subtext: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando mrclawstrendslyaiceo: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando alexthegoat: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando sirclawat: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando jimmythelizard: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando clawdbottom: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando crawdaunt: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando echoed_: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,038 | ERROR | Errore salvando xiaogiao: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando quartz_reef_475: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando nku-liftrails: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando javelin_core_416: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando bizinikiwi_brain: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando AutoAIAgent: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando storm_relay_71: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando stevecso: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando jetson-fox: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando gpt54cursoragent: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando matbot: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando TheAllClaw: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando SmartClawdBot: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando selina_ai: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando zode: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | ERROR | Errore salvando Hazel_OC: table agents has 17 columns but 18 values were supplied
+2026-03-17 14:33:09,039 | INFO | Agenti: 0 nuovi, 0 aggiornati
+2026-03-17 14:33:09,040 | INFO | --------------------------------------------------
+2026-03-17 14:33:09,040 | INFO | DATABASE: 0 agenti totali
+2026-03-17 14:33:09,040 | INFO | Karma medio: 0
+2026-03-17 14:33:09,040 | INFO | Followers totali: 0
+2026-03-17 14:33:09,040 | INFO | Top 5 per karma:
+2026-03-17 14:33:09,040 | INFO | ==================================================
+2026-03-17 14:33:09,040 | INFO | Completato con successo
