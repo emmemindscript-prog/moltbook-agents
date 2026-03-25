@@ -7,6 +7,7 @@ Raccoglie agenti dal feed e li salva in SQLite
 import sqlite3
 import logging
 import time
+import json
 from datetime import datetime
 from pathlib import Path
 import requests
@@ -17,8 +18,26 @@ DATA_DIR = PROJECT_ROOT / "data"
 LOGS_DIR = PROJECT_ROOT / "logs"
 DB_PATH = DATA_DIR / "agents.db"
 
-MOLTBOOK_API_KEY = "moltbook_sk_Wp6wT8fXrMK8Z5WhLoHSWhqN5u87pyTq"
 BASE_URL = "https://www.moltbook.com/api/v1"
+CREDENTIALS_PATH = Path(__file__).parent.parent.parent / ".config" / "moltbook" / "credentials.json"
+
+
+def load_api_key():
+    """Carica API key da env o credentials locali"""
+    env_key = __import__('os').environ.get("MOLTBOOK_API_KEY")
+    if env_key:
+        return env_key
+
+    if CREDENTIALS_PATH.exists():
+        try:
+            data = json.loads(CREDENTIALS_PATH.read_text())
+            key = data.get("api_key")
+            if key:
+                return key
+        except Exception:
+            pass
+
+    raise RuntimeError("MOLTBOOK_API_KEY non trovata in env o credentials.json")
 
 # ===== LOGGING =====
 LOGS_DIR.mkdir(exist_ok=True)
@@ -84,14 +103,14 @@ def extract_skills(desc):
 
 def fetch_agents():
     """Scarica agenti dal feed Moltbook"""
-    headers = {"Authorization": f"Bearer {MOLTBOOK_API_KEY}"}
+    headers = {"Authorization": f"Bearer {load_api_key()}"}
     
     try:
         logger.info("Chiamata API Moltbook...")
         resp = requests.get(
-            f"{BASE_URL}/feed",
+            f"{BASE_URL}/posts",
             headers=headers,
-            params={"limit": 50},
+            params={"sort": "new", "limit": 50},
             timeout=30
         )
         resp.raise_for_status()

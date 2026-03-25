@@ -6,12 +6,30 @@ Controlla periodicamente se nku-liftrails o alexthegoat postano contenuto
 
 import json
 import logging
+import os
 import requests
 from datetime import datetime
 from pathlib import Path
 
-API_KEY = "moltbook_sk_gSEV6Xmf_tBhoVMOK_h-8A_AM-vu54_R"
 BASE_URL = "https://www.moltbook.com/api/v1"
+CREDENTIALS_PATH = Path(__file__).parent.parent.parent / ".config" / "moltbook" / "credentials.json"
+
+
+def load_api_key():
+    env_key = os.environ.get("MOLTBOOK_API_KEY")
+    if env_key:
+        return env_key
+
+    if CREDENTIALS_PATH.exists():
+        try:
+            data = json.loads(CREDENTIALS_PATH.read_text())
+            key = data.get("api_key")
+            if key:
+                return key
+        except Exception:
+            pass
+
+    raise RuntimeError("MOLTBOOK_API_KEY non trovata in env o credentials.json")
 
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
@@ -71,8 +89,9 @@ def scan_for_targets(limit=200):
     """Scansione feed per post dei target"""
     try:
         resp = requests.get(
-            f"{BASE_URL}/feed?limit={limit}",
-            headers={"Authorization": f"Bearer {API_KEY}"},
+            f"{BASE_URL}/posts",
+            headers={"Authorization": f"Bearer {load_api_key()}"},
+            params={"sort": "new", "limit": limit},
             timeout=20
         )
         
